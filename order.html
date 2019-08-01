@@ -5,7 +5,7 @@
 
 <script>
 //Stripe API KEY
-var STRIPE_KEY = 'pk_test_iRATizYAP5reRswmYwJdH6j3005KM3OU0m'
+var STRIPE_KEY = ''
 var stripe = Stripe(STRIPE_KEY);
 $(function(){
   $('#btn-checkout').on('click', ()=>{
@@ -35,6 +35,7 @@ $(function(){
           <!--
             Your checkout form goes here
            -->
+           <input type='text'/>
         <button class="btn btn-primary" id="btn-checkout" style="float: right; position: absolute; right: 0; bottom: 0; margin: 2em;">Checkout</button>
     </div>
   </div>
