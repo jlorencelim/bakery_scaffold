@@ -1,0 +1,40 @@
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+
+<script>
+//Stripe API KEY
+var STRIPE_KEY = 'pk_test_iRATizYAP5reRswmYwJdH6j3005KM3OU0m'
+var stripe = Stripe(STRIPE_KEY);
+$(function(){
+  $('#btn-checkout').on('click', ()=>{
+    stripe.redirectToCheckout({
+      items: [
+        // Replace with the ID of your SKU
+        {sku: 'sku_FXigPYULFvGqEa', quantity: 1}
+      ],
+      successUrl: 'https://example.com/success',
+      cancelUrl: 'https://example.com/cancel',
+    }).then(function (result) {
+       // If `redirectToCheckout` fails due to a browser or network
+      // error, display the localized error message to your customer
+      // using `result.error.message`.
+    });
+  })
+})
+</script>
+
+  <div style="text-align: center;">
+    <div style="display: flex; background-color: darkgrey;display: inline-block;
+    background-color: whitesmoke;
+    min-height: 50%;
+    position: relative;
+    width: 69%;">
+          <h1>Checkout Form</h1>
+          <!--
+            Your checkout form goes here
+           -->
+        <button class="btn btn-primary" id="btn-checkout" style="float: right; position: absolute; right: 0; bottom: 0; margin: 2em;">Checkout</button>
+    </div>
+  </div>

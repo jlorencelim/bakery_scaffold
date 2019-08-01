@@ -1,9 +1,0 @@
-*.pyc
-*.pot
-*.log
-__pycache__/
-local_setings.py
-db.sqlite3
-/media
-/static
-.env
