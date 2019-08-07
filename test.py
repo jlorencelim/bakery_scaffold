@@ -31,5 +31,8 @@ class TestStripe(unittest.TestCase):
     def test_stripe_constructor(self):
         self.assertNotEqual(self.dom_str, 'Stripe(', 'Stripe Constructor function call not found!')
 
+    def test_stripe_redirect(self):
+        stripe_script_index = self.dom_str.index('')
+
 if __name__ == '__main__':
     unittest.main()
