@@ -1,6 +1,16 @@
-# Stripe Checkout Scaffold 
-This is a repository for a trivial challenge scaffold developed for Stripe checkout. 
-- Please do not change the id of HTML button element. 
-- Do not change the stripe script element. 
-- Please use provided API key.
-- You are assumed to complete the challenge in specified time limit. 
+Instructions:
+Add the following item to your Dashboard products and complete the provided "order.html" form to include a Client checkout integration. Have the cancel URL return back to order form, and have the success URL direct the customer to order_success.html. Pass the checkout sesssion id to the order_success.html file.
+
+Dashboard Product:
+One time purchase product
+Product Name: Cupcake
+
+SKU:
+Name: Chocolate cupcake
+Currency: USD
+Amount: $3.25
+
+The repository includes the following files:
+/order.html: complete this form to integrate with Checkout
+/order_success.html: the application should redirect here when Checkout is successful
+/img/cupcake.jpg use this image for your SKU
