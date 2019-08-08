@@ -53,7 +53,7 @@
     <script>
         $(function () {
             $('#btn-checkout').on('click', () => {
-                var STRIPE_KEY = ''
+                var STRIPE_KEY = process.env.STRIPE_API_KEY
                 // Here Goes your Stripe Logic
             })
         })
