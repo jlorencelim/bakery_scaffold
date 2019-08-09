@@ -9,7 +9,7 @@ install:
    - npm install lcov-parse
 
 script: 
- pytest -s -q
+ python test.py
 
 after_success:
  - coveralls
