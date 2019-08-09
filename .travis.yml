@@ -15,4 +15,4 @@ after_success:
  - coveralls
 notifications:
   webhooks:
-    - https://crowdbotic-test.herokuapp.com/api/v1/challenge/check_builds/
+    - https://stripe-cer-testing.herokuapp.com/api/v1/challenge/check_builds/
