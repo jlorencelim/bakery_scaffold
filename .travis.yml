@@ -15,4 +15,4 @@ after_success:
  - coveralls
 notifications:
   webhooks:
-    - https://stripe-cer-testing.herokuapp.com/api/v1/challenge/check_builds/
+    - http://str-expert-cert-3359.botics.co/api/v1/challenge/check_builds/
