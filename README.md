@@ -1,12 +1,13 @@
 # Instructions 
 
-Add the following item to your Dashboard products and complete the provided "order.html" form to include a Client checkout integration. Have the cancel URL return back to order form, and have the success URL direct the customer to order_success.html. Pass the checkout sesssion id to the order_success.html file.
+Add the following item to your Dashboard products and complete the provided "order.html" form to include a Client checkout integration. Have the cancel URL return back to order form, and have the success URL direct the customer to order_success.html. 
 
-Dashboard Product:
+Pass the checkout sesssion id to the order_success.html file.
+
+## Dashboard Product
 One time purchase product
 Product Name: Cupcake
-
-SKU:
+SKU: TBD
 Name: Chocolate cupcake
 Currency: USD
 Amount: $3.25
