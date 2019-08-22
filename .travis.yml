@@ -6,10 +6,11 @@ python:
 install: 
    - pip3 install --upgrade pip 
    - pip install coveralls
+   - pip install pytest
    - npm install lcov-parse
 
 script: 
- python -m unittest -v test.py
+ pytest test.py -v --tb=no
 
 after_success:
  - coveralls
