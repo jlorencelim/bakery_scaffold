@@ -1,6 +1,7 @@
 import unittest
 import re
 
+
 class TestStripe(unittest.TestCase):
     def __init__(self, *args, **kwargs):
         super(TestStripe, self).__init__(*args, **kwargs)
@@ -19,9 +20,6 @@ class TestStripe(unittest.TestCase):
     def test_cancelUrl(self):
         self.assertRegex(self.dom_str, r'cancelUrl: \'https:\/\/[a-z]*\.com/order\.html\'', 'No order.html redirect found on checkout cancel.')
 
-    {% if cookiecutter.admin %}
-    # Add new assessments tests here.
-    {% endif %}
 
 if __name__ == '__main__':
     unittest.main()
