@@ -16,5 +16,3 @@ The repository includes the following files:
 * `/order.html`: complete this form to integrate with Checkout
 * `/order_success.html`: the application should redirect here when Checkout is successful
 * `/img/cupcake.jpg`: use this image for your SKU
-
-Make a .env file from env.example and place your stripe API key in it.
