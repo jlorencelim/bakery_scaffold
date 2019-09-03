@@ -12,7 +12,7 @@ class TestAcceptanceStripe(unittest.TestCase):
         """Check if Stripe key was defined."""
         pattern = re.compile(r"Stripe\('pk_test_\w{24}'\);", re.I | re.M)
         res = re.search(pattern, self.dom_str)
-        self.assertTrue(hasattr(res, 'group'), msg="You didn't defined the Stripe key.")
+        self.assertTrue(hasattr(res, 'group'), msg="You didn't define the Stripe key.")
 
     def test_acceptance_stripe_script_has_been_inserted(self):
         """Check if Stripe script was inserted."""
@@ -20,7 +20,7 @@ class TestAcceptanceStripe(unittest.TestCase):
                              re.I | re.M)
         res = re.search(pattern, self.dom_str)
         self.assertTrue(hasattr(res, 'group'),
-                        msg="You didn't inserted Stripe script file.")
+                        msg="You didn't insert a Stripe script file.")
 
     def test_acceptance_checkout_button_was_instantiated(self):
         """Check if checkout button was captured."""
@@ -28,7 +28,7 @@ class TestAcceptanceStripe(unittest.TestCase):
             r"document.getElementById\('checkout-button-sku_\w{14}'\);", re.I | re.M)
         res = re.search(pattern, self.dom_str)
         self.assertTrue(hasattr(res, 'group'),
-                        msg="You didn't added a checkout button.")
+                        msg="You didn't add a checkout button.")
 
     def test_acceptance_sku_item_defined_on_checkout(self):
         """Check if checkout button was captured."""
@@ -36,7 +36,7 @@ class TestAcceptanceStripe(unittest.TestCase):
                              re.I | re.M)
         res = re.search(pattern, self.dom_str)
         self.assertTrue(hasattr(res, 'group'),
-                        msg="You didn't added the SKU code in the items list.")
+                        msg="You didn't add the SKU code in the items list.")
 
     # Check if redirectToCheckout function call is present
     def test_acceptance_redirect_to_checkout(self):
@@ -50,14 +50,14 @@ class TestAcceptanceStripe(unittest.TestCase):
             r"successUrl: \'(http|https)://(.*)/order_success.html\?session_id=\{CHECKOUT_SESSION_ID\}\'",
             re.I | re.M)
         res = re.search(pattern, self.dom_str)
-        self.assertTrue(hasattr(res, 'group'), msg="You didn't defined a success URL.")
+        self.assertTrue(hasattr(res, 'group'), msg="You didn't define a success URL.")
 
     # Check if cancelUrl redirects to order.html
     def test_acceptance_cancel_url(self):
         pattern = re.compile(r"cancelUrl: \'(http|https)://(.*)/order.html\'",
                              re.I | re.M)
         res = re.search(pattern, self.dom_str)
-        self.assertTrue(hasattr(res, 'group'), msg="You didn't defined a cancel URL")
+        self.assertTrue(hasattr(res, 'group'), msg="You didn't define a cancel URL.")
 
 
 if __name__ == '__main__':
