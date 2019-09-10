@@ -1,4 +1,4 @@
-If you think the status message is incorrect, click into it or check the build status of your latest commit. It may still be building.
+A status button will appear above after you make your firt commit. You can click into it to view information about your build. If you think the status is incorrect, check your build or please wait a couple minutes - it may still be building.
 
 # Instructions 
 
