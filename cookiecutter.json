@@ -1,12 +1,13 @@
 {
-    "product": "",
     "project_slug": "",
-    "product_name": "",
-    "amount": "",
-    "public_key": "",
     "travis": {
         "host": "",
         "repo_name": "",
         "challenge_id": ""
-    }
+    },
+    "public_key": "",
+    "product": "",
+    "product_name": "",
+    "amount": "",
+    "sku": ""
 }
